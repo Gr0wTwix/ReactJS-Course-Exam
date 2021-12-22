@@ -1,0 +1,146 @@
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: animation3 1.5s;
+    background-color: #A0D0EB;
+
+  }
+  
+  .form {
+    width: 700px;
+    height: 480px;
+    border-radius: 8px;
+    display: flex;
+  }
+  
+  .background {
+    width: 350px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #21A8A3;
+    animation: animation1 2s;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 25%;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  .background img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .inputs-wrapper {
+    width: 350px;
+    height: 480px;
+    background-color: #fff;
+    padding: 2rem;
+    animation: animation2 2s;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1.5rem;
+  }
+  
+  .tab {
+    border: none;
+    font-size: 1.5rem;
+    font-family: "Roboto Condensed", sans-serif;
+    background: none;
+    letter-spacing: 1px;
+    padding-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .underline {
+    border-bottom: 4px solid black;
+  }
+  
+  .input {
+    margin-top: 0.5rem;
+  }
+  
+  .sign {
+    border-radius: 4px;
+    background-color: #21a8a3;
+    border: none;
+    color: #fff;
+    text-align: center;
+    padding: 0.8rem;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .sign {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .sign:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 5px;
+    right: -20px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+  }
+  
+  .sign:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+  
+  .sign:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  
+  @keyframes animation1 {
+    0% {
+      transform: translate(-100%, 140%);
+    }
+    50% {
+      transform: translate(-100%, 95%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes animation2 {
+    0% {
+      transform: translate(100%, -140%);
+    }
+    50% {
+      transform: translate(95%, -100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes animation3 {
+    0% {
+      transform: translate(0, -150%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
