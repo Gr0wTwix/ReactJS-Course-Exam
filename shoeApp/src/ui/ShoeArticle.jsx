@@ -5,7 +5,7 @@ import { Card, CardMedia, CardContent, Typography, CardActions, Button, Collapse
 const ShoeArticle = (props) => {
     const [expanded, setExpanded] = useState(false);
     return (
-        <Card sx={{ maxWidht: 345 }} style={{ width: '345px', marginRight: '3rem', marginBottom: '2rem'}}>
+        <Card sx={{ maxWidth: 345 }} style={{ width: '345px', marginRight: '3rem', marginBottom: '2rem'}}>
             <CardMedia
                 component="img"
                 height="140"

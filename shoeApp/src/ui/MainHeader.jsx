@@ -16,10 +16,16 @@ const MainHeader = () => {
     <div>
       <AppBar position="static" style={{ height: '10vh', display: 'flex', justifyContent: 'center' }}>
         <Toolbar variant="dense" style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Link to="/" style={{ ...linkStyle, fontSize: '3rem', display: 'inline-block'}}>
+          <Link to="/" style={{ ...linkStyle, fontSize: '3rem', display: 'inline-block' }}>
             <img src="images/shoesImage1.png" alt="text" style={{}}></img>
           </Link>
           <ul style={{ display: 'flex' }}>
+            <li style={{ marginRight: '1.5rem' }}>
+              <Link to='/services' style={linkStyle}>Services</Link>
+            </li>
+            <li style={{ marginRight: '1.5rem' }}>
+              <Link to='/people' style={linkStyle}>Clients</Link>
+            </li>
             <li style={{ marginRight: '1.5rem' }}>
               <Link to='/create' style={linkStyle}>Create</Link>
             </li>
