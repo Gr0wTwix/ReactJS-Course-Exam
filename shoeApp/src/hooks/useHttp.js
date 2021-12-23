@@ -1,4 +1,4 @@
-import { useReducer, useCallback } from "react";
+import { useReducer} from "react";
 
 const httpReducer = (state, action) => {
     if (action.type === 'PENDING') {
@@ -26,7 +26,7 @@ const initialState = {
 const useHttp = () => {
     const [httpState, dispatch] = useReducer(httpReducer, initialState);
 
-    const sendHttp = async (url, options) => {
+    async function sendHttp(url, options) {
         dispatch({ type: 'PENDING' });
         try {
             const res = await fetch(url, options);
@@ -34,7 +34,7 @@ const useHttp = () => {
 
             dispatch({ type: 'SUCCESS', payload: data });
             return data;
-        } catch(err) {
+        } catch (err) {
             console.log(err);
         }
     }
