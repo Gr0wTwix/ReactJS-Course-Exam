@@ -1,0 +1,64 @@
+.col-md-4 {
+    margin-bottom: 10px;
+  }
+  
+  .card {
+    padding: 20px;
+    border: solid 2px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: inline-block;
+    grid-template-columns: 3;
+    width: 33%;
+  }
+  .card:hover {
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.08);
+  }
+  .card-title {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .card-text {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+  }
+  .card-text .fa {
+    font-size: 26px;
+    
+  }
+  
+  .avatar {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .avatar img {
+    border: solid 6px transparent;
+    border-radius: 50%;
+  }
+  .card:hover .avatar img {
+    border-color: rgb(99, 204, 131);
+  }
+  
+  .btn {
+    width: 15%;
+    border-radius: 25px;
+  }
+  
+  h5 {
+    font-size: 23px;
+  }
+  
+  .clientsH1 {
+    display: block;
+    color: black;
+    font-family: 'Righteous', serif;
+    font-size: 5em; 
+    text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+  }
+  
+  .clearfix {
+    background-color: rgba(226, 233, 241);
+  }

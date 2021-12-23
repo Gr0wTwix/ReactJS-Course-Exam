@@ -1,0 +1,70 @@
+/* --------------------------------- Footer  Section starts  
+                        -------------------------------------------------------*/
+
+                        footer {
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            padding: 5rem 0;
+                            background-color: #182334;
+                            color: #fff;
+                          }
+                          
+                          footer h2 {
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                          }
+                          
+                          footer ul {
+                            list-style: none;
+                            font-size: 1.5rem;
+                            font-weight: lighter;
+                            color: #fff;
+                            cursor: pointer;
+                            margin: 0rem;
+                            grid-template-columns: 3;
+                            width: 15%;
+                            text-align: center;
+                            align-items: center;
+                            justify-content: center;
+                          }
+                          
+                          footer li:hover {
+                            color: var(--primary-color);
+                          }
+                          
+                          footer .fontawesome-style {
+                            font-size: 2.3rem;
+                            color: var(--primary-color);
+                            background-color: transparent;
+                            width: 1rem;
+                            height: 1rem;
+                            margin: 3rem 0;
+                            cursor: pointer;
+                          }
+                          
+                          footer .fontawesome-style:hover {
+                            transition: all 1s;
+                            animation: rotatefont 1s linear infinite alternate-reverse;
+                            color: #fff;
+                          }
+                          
+                          @keyframes rotatefont {
+                            0% {
+                              transform: scale(0.6);
+                            }
+                            100% {
+                              transform: scale(1.2);
+                            }
+                          }
+                          
+                          footer .main-hero-para {
+                            margin: 0;
+                            text-align: center;
+                          }
+                          
+                          /* --------------------------------- Footer  Section ends  
+                                                  -------------------------------------------------------*/
