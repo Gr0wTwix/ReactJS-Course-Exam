@@ -7,6 +7,8 @@ import Signup from './pages/Signup';
 import Shoes from './pages/Shoes';
 import MainHeader from './ui/MainHeader';
 import Create from './pages/Create';
+import UserCard from "./ui/userCards";
+import Footer from "./components/Footer";
 
 function App() {
   const { isLoggedIn } = useSelector(state => state);
@@ -15,7 +17,7 @@ function App() {
   if (!isLoggedIn) {
     routes = (
       <Routes>
-        <Route path="/" element={<Signup />} />
+        <Route path="/" element={<Signup/>} />
       </Routes>
     )
   } else {
@@ -25,7 +27,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Shoes />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/people" element={<UserCard />} />
         </Routes>
+        <Footer/>
       </Fragment>
     )
   }
