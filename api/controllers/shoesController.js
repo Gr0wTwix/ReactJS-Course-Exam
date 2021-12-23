@@ -8,7 +8,7 @@ router.get('/:shoeId', shoesControllers.getShoeById);
 // applying auth middleware to the routes below,so the middleware will check if the token is valid and authorize the users
 router.use(authValidationMiddleware);
 
-router.post('/', shoesControllers.createShoePost);
+router.post('/shoes', shoesControllers.createShoePost);
 router.patch('/:shoeId', shoesControllers.editShoeById);
 router.delete('/:shoeId', shoesControllers.deleteShoeById);
 
