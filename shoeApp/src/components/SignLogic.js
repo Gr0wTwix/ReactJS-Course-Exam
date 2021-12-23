@@ -43,8 +43,7 @@ const SignLogic = () => {
         e.preventDefault();
 
         const isSomeFieldInvalid = checkIsInvalid(authFormData);
-        if (isSomeFieldInvalid) return 
-
+        if (isSomeFieldInvalid) return;
 
         if (isLoginMode) {
             await sendHttp('http://localhost:5000/api/users/login', {
@@ -57,7 +56,8 @@ const SignLogic = () => {
                     password: authFormData.password.value
                 })
             }).then((data) => {
-                dispatch(authSlice.actions.login({ acecessToken: data.token, userId: data.usrId }));
+                console.log(data);
+                dispatch(authSlice.actions.login({ accessToken: data.token, userId: data.userId }));
                 navigate('/');
             });
         } else {
