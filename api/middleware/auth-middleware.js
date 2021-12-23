@@ -16,3 +16,21 @@ module.exports = () => (req, res, next) => {
     }
     next();
 }
+
+// const jwt = require('jsonwebtoken');
+
+// module.exports = (req, res, next) => {
+//     const token = req.header('X-Authorization');
+
+//     if (!token) {
+//         return res.status(401).json({ message: 'You are not authenticated!', status: 401 });
+//     }
+
+//     try {
+//         const decodedToken = jwt.verify(token, 'gotingotin');
+//         req.userId = decodedToken.userId;
+//         next();
+//     } catch(error) {
+//         return res.status(403).json({ message: 'Unauthorized!', status: 403 });
+//     }
+// }
