@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { Button, ButtonGroup, Card, CardMedia, CardContent, Typography, CardActions, Grid } from '@material-ui/core';
+import { Button, ButtonGroup, Grid } from '@material-ui/core';
 import ShoesLogic from '../components/ShoesLogic';
 
 import ShoeArticle from '../ui/ShoeArticle';
