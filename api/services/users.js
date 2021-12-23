@@ -2,6 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const UserModel = require('../models/user-model');
+const TOKEN_SECRET = require('../config/index.js');
 const { validateRegister, validateLogin } = require('../validations');
 
 
@@ -50,6 +51,7 @@ const register = async (req, res, next) => {
 
 
 const loginUser = async (req, res, next) => {
+    console.log(req.body);
     const { error } = validateLogin(req.body);
 
     if (error) {
@@ -82,7 +84,8 @@ const loginUser = async (req, res, next) => {
 
     let token;
     try {
-        token = jwt.sign({ userId: existingUser._id }, 'gotingotin');
+        console.log(TOKEN_SECRET);
+        token = jwt.sign({ userId: existingUser._id }, TOKEN_SECRET);
     } catch(error) {
         return res.status(500).json({ message: error.message || 'Could not generate the token!', status: 500 });
     }

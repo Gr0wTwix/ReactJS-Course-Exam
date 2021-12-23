@@ -5,8 +5,10 @@ const { validateShoePost } = require('../validations');
 const toObject = (el) => el.toObject({ getters: true });
 
 const createShoePost = async (req, res) => {
+    console.log("Req Body: ", req.body);
     const error = validateShoePost(req.body);
-
+    console.log("Error: ", error);
+    
     if (error.details) {
         console.log(error);
         return res.status(422).json({ message: error.details[0].message, status: 422 });
@@ -14,6 +16,7 @@ const createShoePost = async (req, res) => {
     
     const { title, description, image, price } = req.body;
     const userId = req.userId;
+    console.log(req.body, req.userId);
 
     const newShoePost = new shoeModel({
         title,
@@ -30,10 +33,6 @@ const createShoePost = async (req, res) => {
     }
 
     res.status(201).json(toObject(newShoePost));
-    db.collection('shoes').insertOne(req.body, (err, data) => {
-        if (err) return console.log(err);
-        res.send(('saved to db: ' + data));
-    })
 }
 
 const getAllShoePosts = async (req, res) => {
